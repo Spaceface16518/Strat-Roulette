@@ -3,3 +3,8 @@
     "title": "Crab Walk",
     "description": "Use a pistol while crouching the entire game. If dual pistols are avalible, use dual pistols."
   },
+  "3": {
+    "title": "Heads Up",
+    "description": "Fire your gun until there is only one round in the current clip. Start every battle this way."
+  }
+}
