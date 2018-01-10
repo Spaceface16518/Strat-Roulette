@@ -1,3 +1,4 @@
+  import write from "./modules/write.js";
 
 
 $.ajax({
@@ -5,6 +6,9 @@ $.ajax({
   url: "./modules/find-strat.py",
   data: {
     param: text
+  function displayStrat() {
+    let strat = fetPython;
+    write(strat);
   }
 }).done(function (o) {
   console.log(line);
