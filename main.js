@@ -1,5 +1,4 @@
 $(document).ready(function () {
-  import write from "./modules/write.js";
   function fetchPython() {
     $.ajax({
       type: "POST",
