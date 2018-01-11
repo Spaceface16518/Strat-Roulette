@@ -8,7 +8,7 @@ $(document).ready(function () {
       data: {
         param: text
       }
-    }).done(function () {
+    }).done(function (result) {
       console.log(line);
     });
   }
