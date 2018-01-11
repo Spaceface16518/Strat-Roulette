@@ -2,18 +2,10 @@
   box-sizing: border-box
 }
 
-body {
+body {}
 
-}
+#result {}
 
-#result {
-  
-}
+.stand-out {}
 
-.stand-out {
-  
-}
-
-h1 {
-  
-}
+h1 {}
