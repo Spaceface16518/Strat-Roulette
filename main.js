@@ -1,4 +1,3 @@
-$(document).ready(function () {
 import {
   write,
   testConnection
@@ -10,20 +9,16 @@ import {
 const fetch = require("./modules/Fetch.js");
 const highestID = require("./modules/HighestID.js")
 
-  function fetchPython() {
-    $.ajax({
-      type: "POST",
-      url: "./modules/find-strat.py",
-      data: {
-        param: text
-      }
-    }).done(function (result) {
-      console.log(line);
-    });
+$(document).ready(function () {
+  function fetchStrat() {
+    let cap = highestID.getHighestID();
+    let id = generateRandNum(1, cap);
+    let strat = fetch.fetchStrat(id)
   }
 
-  function displayStrat() {
-    let strat = fetchPython();
-    write(strat);
+  function displayStrat(strat) {
+    console.log("Displaying strat: " + strat);
+    write(strat)
   }
+
 })
