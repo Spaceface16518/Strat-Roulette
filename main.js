@@ -1,5 +1,14 @@
 $(document).ready(function () {
-  import Write from "https://gist.github.com/Spaceface16518/f91d67bf0745cead14dc6f81d015e187.js";
+import {
+  write,
+  testConnection
+} from "./modules/Write.js";
+import {
+  generateRandNum,
+  testConnection
+} from "./modules/RandNum.js";
+const fetch = require("./modules/Fetch.js");
+const highestID = require("./modules/HighestID.js")
 
   function fetchPython() {
     $.ajax({
