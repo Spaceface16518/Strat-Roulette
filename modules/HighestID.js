@@ -16,7 +16,7 @@ module.exports.getHighestID = () => {
 
   db.close((err) => {
     if (err) {
-      console.error(err.message);
+      console.error(err);
     }
     console.log('Disconnected from the Strats Database');
   });
