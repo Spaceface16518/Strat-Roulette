@@ -9,15 +9,14 @@ module.exports.fetchStrat = (paramID) => {
   });
 
   db.serialize((id) => {
-db.get('SELECT * FROM Strats WHERE id === $ID_place_holder',
-{
-  $ID_place_holder = id
-}, (err, rows) => {
-  if (err) {
-    console.error(err);
-  }
-  return rows;
-})
+    db.get('SELECT * FROM Strats WHERE id === $ID_place_holder', {
+      $ID_place_holder = id
+    }, (err, rows) => {
+      if (err) {
+        console.error(err);
+      }
+      return rows;
+    })
   })
 
   db.close((err) => {

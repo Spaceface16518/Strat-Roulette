@@ -10,19 +10,18 @@ import {
 const fetch = require("./modules/Fetch.js");
 const highestID = require("./modules/HighestID.js")
 
-$(document).ready(function () {
-  function fetchStrat() {
-    let cap = highestID.getHighestID();
-    let id = generateRandNum(1, cap);
-    let strat = fetch.fetchStrat(id)
-  }
 
-  function displayStrat(strat) {
-    console.log("Displaying strat: " + strat);
-    write(strat)
-  }
+function fetchStrat() {
+  let highestID = highestID.getHighestID();
+  let id = generateRandNum(1, highestID);
+  let strat = fetch.fetchStrat(id)
+}
 
-  function clearStrat() {
-    clear()
-  }
-})
+function displayStrat(strat) {
+  console.log("Displaying strat: " + strat);
+  write(strat)
+}
+
+function clearStrat() {
+  clear()
+}
