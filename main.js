@@ -1,6 +1,7 @@
 import {
   write,
-  testConnection
+  testConnection,
+  clear
 } from "./modules/Write.js";
 import {
   generateRandNum,
@@ -21,4 +22,7 @@ $(document).ready(function () {
     write(strat)
   }
 
+  function clearStrat() {
+    clear()
+  }
 })
