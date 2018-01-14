@@ -1,6 +1,6 @@
 module.exports.getHighestID = () => {
   const sqlite3 = require('sqlite3');
-  let db = new sqlite3.Database(':memory:', sqlite3.OPEN_READONLY, (err) => {
+  let db = new sqlite3.Database('../data/strats.db', (err) => {
     if (err) {
       console.error(err);
     }

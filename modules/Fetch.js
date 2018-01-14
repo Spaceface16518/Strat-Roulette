@@ -1,7 +1,7 @@
 module.exports.fetchStrat = (paramID) => {
   const sqlite3 = require('sqlite3');
   let id = paramID // id(variable) = id(parameter)
-  let db = new sqlite3.Database('../data/strats.db', sqlite3.READ_ONLY, (err) => {
+  let db = new sqlite3.Database('../data/strats.db', (err) => {
     if (err) {
       console.error(err);
     }
