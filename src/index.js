@@ -18,3 +18,17 @@ function displayStrat(strat) {
 function clearStrat() {
   clear()
 }
+
+$(document).ready(function(){
+  $("#chooseButton").click(function(){
+    console.log("Choose button clicked")
+    let strat = fetchStrat();
+    displayStrat(strat);
+  });
+  $("#resetButton").click(function(){
+    console.log("reset button clicked");
+    clearStrat();
+  });
+})
+
+console.log("Init")
