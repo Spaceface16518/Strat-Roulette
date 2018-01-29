@@ -1,12 +1,5 @@
-import {
-  write,
-  testConnection,
-  clear
-} from "./modules/Write.js";
-import {
-  generateRandNum,
-  testConnection
-} from "./modules/RandNum.js";
+import { write, testConnection, clear } from "../assets/modules/Write.js";
+import { generateRandNum, testConnection } from "../assets/modules/RandNum.js";
 const fetch = require("./modules/Fetch.js");
 const highestID = require("./modules/HighestID.js")
 
