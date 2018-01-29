@@ -1,7 +1,7 @@
 module.exports.fetchStrat = (paramID) => {
-  const sqlite3 = require('sqlite3');
-  let id = paramID // id(variable) = id(parameter)
-  let db = new sqlite3.Database('../data/strats.db', (err) => {
+  const sqlite = require('sqlite');
+  let id = paramID;
+  let db = new sqlite.Database('../data/strats.db', (err) => {
     if (err) {
       console.error(err);
     }
@@ -10,7 +10,7 @@ module.exports.fetchStrat = (paramID) => {
 
   db.serialize((id) => {
     db.get('SELECT * FROM Strats WHERE id === $ID_place_holder', {
-      $ID_place_holder = id
+      $ID_place_holder: id
     }, (err, rows) => {
       if (err) {
         console.error(err);
